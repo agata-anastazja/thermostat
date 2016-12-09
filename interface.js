@@ -37,11 +37,17 @@ $( document ).ready(function() {
           updateTemperature();
     });
 
-
-    $('#change-mode').click(function() {
-          thermostat.changePowerSaveMode();
+    $('#turnPSMOn').click(function() {
+          thermostat.turnOnPSM();
           updateTemperature();
     });
+
+
+    $('#turnPSMOff').click(function() {
+          thermostat.turnOffPSM();
+          updateTemperature();
+    });
+
 
 
 
