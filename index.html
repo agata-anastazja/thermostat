@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Thermostat </title>
-<style>
+  <title>Thermostat </title>
+  <style>
 
-</style>
+  </style>
 
 </head>
 <body>
-<section>
-<h1>Current temperature:</h1>
-<h1 id="temperature"></h1>
-<p>
-<button id="increase">UP</button>
-<button id="decrease">DOWN</button>
-<button id="reset">RESET</button>
-</p>
-<p>
-<button id="turnPSMOn">Power saving mode on</button>
-<button id="turnPSMOff">Power saving mode off</button>
-</p>
+  <section>
+    <h1>Current temperature: <span id="current-temperature"></span></h1>
+      <select id="current-city">
+          <option value="london">London</option>
+          <option value="newyork">New York</option>
+          <option value="paris">Paris</option>
+          <option value="tokyo">Tokyo</option>
+        </select>
+  </section>
+  <section>
+    <h1>Temperature indoors:</h1>
+    <h1 id="temperature"></h1>
+    <p>
+      <button id="increase">UP</button>
+      <button id="decrease">DOWN</button>
+      <button id="reset">RESET</button>
+    </p>
+    <p>
+      <button id="turnPSMOn">Power saving mode on</button>
+      <button id="turnPSMOff">Power saving mode off</button>
+    </p>
 
-<!-- <a href="http://jquery.com/">jQuery</a> -->
-</section>
+  </section>
 
 
 
-<script src="src/thermostat.js"></script>
+  <script src="src/thermostat.js"></script>
 
 
-<script src="jquery-3.1.1.js"></script>
-<script src="./interface.js"></script>
+  <script src="jquery-3.1.1.js"></script>
+  <script src="./interface.js"></script>
 
 </body>
 

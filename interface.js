@@ -1,17 +1,4 @@
 $( document ).ready(function() {
-    // $( "a" ).addClass( "test" );
-    //
-    // alert( "welcome" );
-    //
-    // $( "a" ).click(function( event ) {
-    //
-    //
-    //     event.preventDefault();
-    //     $(this).hide();
-    //
-    //     $.get(index.html, myCallBack);
-    // });
-
     var thermostat = new Thermostat;
 
     updateTemperature();
@@ -48,14 +35,13 @@ $( document ).ready(function() {
           updateTemperature();
     });
 
-
-
-
-
-
-
-
-
-
-
+    $('#current-city').change(function() {
+      var city = $('#current-city').val();
+      var url = 'http://api.openweathermap.org/data/2.5/weather?q=';
+      var token = '&appid=94bf779877b538f9e7ddc5d40272248d';
+      var units = '&units=metric';
+      $.get(url + city + token + units, function(data) {
+        $('#current-temperature').text(data.main.temp)
+      });
+    });
 });
